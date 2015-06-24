@@ -32,7 +32,7 @@ $
 In gdb, (version 7.9.50.20150603-cvs here):
 
 ```
-$ gdb -q ./test
+$ gdb -q ./test -ex "set target-async on" -ex "set non-stop on" -ex "set detach-on-fork off"
 Reading symbols from ./test...done.
 (gdb) r &
 Starting program: /tmp/test-fork-threads/test 
