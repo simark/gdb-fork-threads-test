@@ -34,7 +34,7 @@ $
 In gdb, (version 7.9.50.20150603-cvs here):
 
 ```
-$ gdb -q ./test -ex "set non-stop on" -ex "set detach-on-fork off"
+$ gdb -nx -q ./test -ex "set non-stop on" -ex "set detach-on-fork off"
 Reading symbols from ./test...done.
 (gdb) r &
 Starting program: /tmp/test-fork-threads/test 
@@ -353,7 +353,7 @@ $ ps -o pgid,pid,state,comm -e -L | grep test
 And here it is with gdb 7.9 (which works fine). The "Test ended successfully" indicates that everything went fine.
 
 ```
-gdb.7.9 -q ./test -ex "set non-stop on" -ex "set detach-on-fork off" 
+gdb.7.9 -nx -q ./test -ex "set non-stop on" -ex "set detach-on-fork off" 
 Reading symbols from ./test...done.
 (gdb) r &
 Starting program: /home/emaisin/src/gdb-fork-threads-test/test 
