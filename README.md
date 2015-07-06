@@ -1,3 +1,5 @@
+This test case makes the inferior spawn a number of forks and waits for them to finish. Each fork child then spawns a number of threads and joins them.
+
 Just type `make` to build.
 
 A normal run looks like this:
